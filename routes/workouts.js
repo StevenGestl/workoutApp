@@ -1,5 +1,5 @@
 const express = require('express')
-
+const mongoose = ('require')
 const router = express.Router()
 
 
@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 // GET a single workout from api
 
-router.get('/:id', (res, req) => {
+router.get('/:id', (req, res) => {
     res.json({mssg: 'Get a single workout'})
 })
 
@@ -22,13 +22,13 @@ router.post('/', (req, res) => {
 
 // DELETE a workout
 
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
     res.json({mssg: 'DELETE a new workout'})
 })
 
 //UPDATE a workout
 
-router.patch('/', (req, res) => {
+router.patch('/:id', (req, res) => {
     res.json({mssg: 'UPDATE a new workout'})
 })
 
@@ -36,3 +36,6 @@ module.exports = router
 
 
 // nodemon server.js to run 
+
+// mongo username mario
+//password letsAgo45
