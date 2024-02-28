@@ -1,5 +1,5 @@
 const express = require('express')
-const mongoose = ('require')
+
 const router = express.Router()
 
 
@@ -39,3 +39,5 @@ module.exports = router
 
 // mongo username mario
 //password letsAgo45
+
+// npm install mongoose
