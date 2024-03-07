@@ -1,6 +1,10 @@
 const express = require('express')
 const {
     createWorkout,
+    getWorkout,
+    getWorkouts,
+    deleteWorkout,
+    updateWorkout
 } = require('../controllers/workoutController')
 
 
@@ -8,15 +12,11 @@ const router = express.Router()
 
 
 // GET all workouts from api
-router.get('/', (req, res) => {
-    res.json({mssg: 'GET all workouts'})
-} )
+router.get('/', getWorkouts)
 
 // GET a single workout from api
 
-router.get('/:id', (req, res) => {
-    res.json({mssg: 'Get a single workout'})
-})
+router.get('/:id', getWorkout)
 
 // POST a new workout
 
